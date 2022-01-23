@@ -9,14 +9,20 @@
 ga('send', 'pageview', location.pathname);
 
 // menu-lista-contato
-var contactButtonMenuListaContato = document.getElementsByClassName("menu-lista-contato")[0];
-contactButtonMenuListaContato.addEventListener("click", function() {
+var buttonMenuListaContato = document.getElementsByClassName("menu-lista-contato")[0];
+buttonMenuListaContato.addEventListener("click", function() {
     ga('send', 'event', 'menu', 'entre_em_contato', 'link_externo');
 })
 
 // menu-lista-download
-var contactButtonMenuListaDownload = document.getElementsByClassName("menu-lista-download")[0];
-contactButtonMenuListaDownload.addEventListener("click", function() {
+var buttonMenuListaDownload = document.getElementsByClassName("menu-lista-download")[0];
+buttonMenuListaDownload.addEventListener("click", function() {
     ga('send', 'event', 'menu', 'download_pdf', 'download_pdf');
 })
 
+// analise: card-montadoras
+var buttonCardMontadoras = document.getElementsByClassName("card card-montadoras")[0]
+buttonCardMontadoras.addEventListener("click", function() {
+    var buttonLabel = buttonCardMontadoras.dataset.name;
+    ga('send', 'event', "analise", "ver_mais", buttonLabel);
+})

@@ -21,20 +21,26 @@ buttonMenuListaDownload.addEventListener("click", function() {
 })
 
 // analise: card-montadoras
-var buttonCardMontadoras0 = document.getElementsByClassName("card card-montadoras")[0]
+var buttonCardMontadoras0 = document.getElementsByClassName("card card-montadoras")[0];
 buttonCardMontadoras0.addEventListener("click", function() {
     var buttonLabel = buttonCardMontadoras0.dataset.name;
     ga('send', 'event', "analise", "ver_mais", buttonLabel);
 })
 
-var buttonCardMontadoras1 = document.getElementsByClassName("card card-montadoras")[1]
+var buttonCardMontadoras1 = document.getElementsByClassName("card card-montadoras")[1];
 buttonCardMontadoras1.addEventListener("click", function() {
     var buttonLabel = buttonCardMontadoras1.dataset.name;
     ga('send', 'event', "analise", "ver_mais", buttonLabel);
 })
 
-var buttonCardMontadoras2 = document.getElementsByClassName("card card-montadoras")[2]
+var buttonCardMontadoras2 = document.getElementsByClassName("card card-montadoras")[2];
 buttonCardMontadoras2.addEventListener("click", function() {
     var buttonLabel = buttonCardMontadoras2.dataset.name;
     ga('send', 'event', "analise", "ver_mais", buttonLabel);
+})
+
+// sobre: popup
+var buttonEnviar = document.getElementById("enviar");
+buttonEnviar.addEventListener("click", function() {
+    ga('send', 'event', "contato", "enviado", "enviado");
 })

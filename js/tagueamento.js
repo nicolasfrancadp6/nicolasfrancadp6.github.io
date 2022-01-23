@@ -5,8 +5,18 @@
 // para fazer a sua coleta.
 // Caso tenha alguma dúvida sobre o case, não hesite em entrar em contato.
 
-var contactButton = document.getElementsByClassName("menu-lista-contato")[0];
-contactButton.addEventListener("click", function() {
+// page view
+ga('send', 'pageview', location.pathname);
+
+// menu-lista-contato
+var contactButtonMenuListaContato = document.getElementsByClassName("menu-lista-contato")[0];
+contactButtonMenuListaContato.addEventListener("click", function() {
     ga('send', 'event', 'menu', 'entre_em_contato', 'link_externo');
+})
+
+// menu-lista-download
+var contactButtonMenuListaDownload = document.getElementsByClassName("menu-lista-download")[0];
+contactButtonMenuListaDownload.addEventListener("click", function() {
+    ga('send', 'event', 'menu', 'download_pdf', 'download_pdf');
 })
 

@@ -46,9 +46,8 @@ if (buttonCardMontadoras0 !== undefined) {
 var buttonEnviar = document.getElementById("enviar");
 if (buttonEnviar !== null) {
     buttonEnviar.addEventListener("click", function() {
-        var form = document.forms.formcontato;
-        var formData = new FormData(form);
-        var email = formData.get("email");
+        var email = document.getElementById("email").value;
+        console.log(email);
         ga('send', 'event', "contato", email, "preencheu");
         ga('send', 'event', "contato", "enviado", "enviado");
     })

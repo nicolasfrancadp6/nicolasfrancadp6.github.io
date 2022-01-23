@@ -21,8 +21,20 @@ buttonMenuListaDownload.addEventListener("click", function() {
 })
 
 // analise: card-montadoras
-var buttonCardMontadoras = document.getElementsByClassName("card card-montadoras")[0]
-buttonCardMontadoras.addEventListener("click", function() {
+var buttonCardMontadoras0 = document.getElementsByClassName("card card-montadoras")[0]
+buttonCardMontadoras0.addEventListener("click", function() {
+    var buttonLabel = buttonCardMontadoras.dataset.name;
+    ga('send', 'event', "analise", "ver_mais", buttonLabel);
+})
+
+var buttonCardMontadoras1 = document.getElementsByClassName("card card-montadoras")[1]
+buttonCardMontadoras1.addEventListener("click", function() {
+    var buttonLabel = buttonCardMontadoras.dataset.name;
+    ga('send', 'event', "analise", "ver_mais", buttonLabel);
+})
+
+var buttonCardMontadoras2 = document.getElementsByClassName("card card-montadoras")[2]
+buttonCardMontadoras0.addEventListener("click", function() {
     var buttonLabel = buttonCardMontadoras.dataset.name;
     ga('send', 'event', "analise", "ver_mais", buttonLabel);
 })
